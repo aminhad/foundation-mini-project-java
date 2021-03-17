@@ -17,10 +17,12 @@ public class Customer implements ICustomer {
     public String getName(){
         return name;
     }
+
     @Override
     public ArrayList<Double> getTransactions(){
         return transactions;
     }
+
     @Override
     public void addTransaction(double transaction){
         transactions.add(transaction);
