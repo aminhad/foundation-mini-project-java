@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.ArrayList;
 
 public class Bank {
@@ -42,11 +44,11 @@ public class Bank {
     public boolean listCustomers(String branchName, boolean printTransaction) {
         if(findBranch(branchName) != null && printTransaction) {
             Branch branch = findBranch(branchName);
-            System.out.println("Customer detail for branch " + branchName);
+            System.out.println("Classes.Customer detail for branch " + branchName);
             int customerCounter = 0;
             for(Customer customer : branch.getCustomers()) {
                 customerCounter++;
-                System.out.println("Customer: " + customer.getName() + "["+customerCounter+"]");
+                System.out.println("Classes.Customer: " + customer.getName() + "["+customerCounter+"]");
                 int transactionCounter = 0;
                 System.out.println("Transactions");
                 for(Double transaction : customer.getTransactions()) {
@@ -59,10 +61,10 @@ public class Bank {
         else {
             Branch branch = findBranch(branchName);
             int customerCounter = 0;
-            System.out.println("Customer detail for branch " + branchName);
+            System.out.println("Classes.Customer detail for branch " + branchName);
             for (Customer customer : branch.getCustomers()) {
                 customerCounter++;
-                System.out.println("Customer: " + customer.getName() + "[" + customerCounter + "]");
+                System.out.println("Classes.Customer: " + customer.getName() + "[" + customerCounter + "]");
             }
         }
         return false;
