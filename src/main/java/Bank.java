@@ -15,7 +15,7 @@ public class Bank {
             branches.add(branch);
             return true;
         }
-        return false;//print
+        return false;
     }
     public boolean addCustomer(String branchName, String customerName, double initTransaction) {
         if(findBranch(branchName) != null) {
