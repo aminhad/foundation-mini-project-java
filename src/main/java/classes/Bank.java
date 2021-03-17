@@ -6,7 +6,7 @@ public class Bank {
 
     public Bank(String bankName) {
         this.name = bankName;
-        this.branches = new ArrayList<Branch>();
+        this.branches = new ArrayList<>();
     }
 
     public boolean addBranch(String branchName) {

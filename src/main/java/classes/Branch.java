@@ -8,7 +8,7 @@ public class Branch {
 
     public Branch(String branchName){
         this.name = branchName;
-        this.customers = new ArrayList<Customer>();
+        this.customers = new ArrayList<>();
     }
     public String getName() { return name; }
 
