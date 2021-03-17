@@ -1,8 +1,10 @@
 package classes;
 
+import interfaces.IBranch;
+
 import java.util.ArrayList;
 
-public class Branch {
+public class Branch implements IBranch {
     private String name;
     private ArrayList<Customer> customers;
 
@@ -10,12 +12,16 @@ public class Branch {
         this.name = branchName;
         this.customers = new ArrayList<>();
     }
+
+    @Override
     public String getName() { return name; }
 
+    @Override
     public ArrayList<Customer> getCustomers() {
         return customers;
     }
 
+    @Override
     public boolean newCustomer(String customerName, double initTransaction) {
         if(findCustomer(customerName) == null) {
             Customer customer = new Customer(customerName, initTransaction);
@@ -25,6 +31,7 @@ public class Branch {
         return false;
     }
 
+    @Override
     public boolean addCustomerTransaction(String customerName, double transaction) {
         if(findCustomer(customerName) != null) {
             Customer customers = findCustomer(customerName);
