@@ -8,9 +8,10 @@ public class Customer implements ICustomer {
     private String name;
     private ArrayList<Double> transactions;
 
-    public Customer(String customerName, double transaction){
+    public Customer(String customerName, double initialTransaction){
         this.name = customerName;
         this.transactions = new ArrayList<>();
+        transactions.add(initialTransaction);
     }
 
     @Override
